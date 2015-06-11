@@ -56,6 +56,6 @@ TEST_CASE("Fake Order"){
     CHECK(fakeOrderGOOG102.getLimitPrice() == 102);
     CHECK(fakeOrderGOOG102.isVisible() == 1);
     CHECK(fakeOrderGOOG102.isVisible() == true);
-
+    std::cout << "test" << std::endl;
     std::cout << "currentDateTime()=" << currentDateTime() << std::endl;
 }
