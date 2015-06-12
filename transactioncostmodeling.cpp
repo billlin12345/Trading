@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cmath>
 
-#include "transactioncostmodeling.h"
-#include "orderbook.h"
-#include "orderbooksimulation.h"
+#include "transactioncostmodeling.hpp"
+#include "orderbook.hpp"
+#include "orderbooksimulation.hpp"
 
 class TCA{
 public:

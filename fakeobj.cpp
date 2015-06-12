@@ -4,13 +4,13 @@
 #include <map>
 #include <boost/algorithm/string.hpp>
 
-#include "fakeobj.h"
-#include "algorithms.h"
-#include "fakeobj.h"
-#include "orderbook.h"
-#include "orderbooksimulation.h"
-#include "transactioncostmodeling.h"
-#include "webdata.h"
+#include "fakeobj.hpp"
+#include "algorithms.hpp"
+#include "fakeobj.hpp"
+#include "orderbook.hpp"
+#include "orderbooksimulation.hpp"
+#include "transactioncostmodeling.hpp"
+#include "webdata.hpp"
 
 namespace fake{
     // defines all the static variables

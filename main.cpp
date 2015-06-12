@@ -13,16 +13,16 @@
 #include <time.h>
 
 #include "curl/curl.h"
-#include "catch.h"
+#include "catch.hpp"
 
-#include "algorithms.h"
-#include "fakeobj.h"
-#include "orderbook.h"
-#include "orderbooksimulation.h"
-#include "transactioncostmodeling.h"
-#include "webdata.h"
+#include "algorithms.hpp"
+#include "fakeobj.hpp"
+#include "orderbook.hpp"
+#include "orderbooksimulation.hpp"
+#include "transactioncostmodeling.hpp"
+#include "webdata.hpp"
 
-// Gets current date/time, format is YYYY-MM-DD.HH:mm:ss
+// Gets current date/time, format is YYYY-MM-DD.hppH:mm:ss
 const std::string currentDateTime() {
     time_t     now = time(0);
     struct tm  tstruct;
@@ -54,11 +54,10 @@ TEST_CASE("Fake Order"){
     fake::Order fakeOrderGOOG102("Goog", 102, 200, 1, 1);
 
     CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 1);
-
     fake::Order fakeOrderGOOG102Again("GoOg", 102, 100, 1, 1);
     fake::Order ("goog", 102, 100, 1, 1);    // anonymous; must save this in queue!
 
-    CHECK(fake::Stock::stocks["GooG"].limitsBid[10200].getSize() == 2);
+    CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 2); // line breaks if it's not caps
 
     CHECK(fakeOrderGOOG102.getTicker() == "GOOG");
     CHECK(fakeOrderGOOG102.getShares() == 200);
