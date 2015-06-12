@@ -6,7 +6,6 @@
 #include "orderbook.h"
 #include "webdata.h"
 
-
 namespace orderbook{
     Order::Order(){}
     Order::~Order(){}
@@ -17,9 +16,11 @@ namespace orderbook{
         ticker = t;
         //OrderID += 1;   // forgot if need getter/setter for changing this
         //if (ticker.Order) // .............. actually maybe don't need to check since Order is always added when initialized?
+
     }
 
     // getters
+    std::string Order::getTicker(){return ticker;}
     double Order::getShares(){return shares;}
     double Order::getLimitPrice(){return limitPrice;}
     double Order::getLimitPrice100(){return limitPrice100;}

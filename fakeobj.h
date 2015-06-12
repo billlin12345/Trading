@@ -2,7 +2,7 @@
 #define FAKEOBJ
 
 #include <map>
-#include <queue>
+#include <deque>
 #include <vector>
 
 #include "orderbook.h"
@@ -42,6 +42,23 @@ public:
     // execute function
 };
 
+class Limit{
+private:
+    std::string ticker;
+    double limitPrice;
+    double size;
+    double volume;
+
+public:
+    Limit();
+    ~Limit();
+    Limit(std::string t, double price);
+    //std::map<   // key: limit, val: Limit objcet for "random-like" access like a tree.
+    std::deque<Order> orders;
+    double getSize();
+    double getVolume();
+};
+
 
 class Stock{
 private:
@@ -57,9 +74,12 @@ public:
     Stock();
     ~Stock();
     Stock(std::string t);
-    // static std::map<double, std::queue<orderbook::Order> > Orderbook;
-    std::vector<double> limitsAsk;
-    std::vector<double> limitsBid;
+    static std::map<double, std::queue<orderbook::Order> > Orderbook;
+    std::vector<Limit> limitsAsk;
+    std::vector<Limit> limitsBid;
+
+    // static std::map<std::string, Limit> stocks;  // correct
+    static std::map<std::string, Stock> stocks;     // wrong
 
     // getters
     std::string getName();
@@ -71,16 +91,8 @@ public:
     double getAverageDailyVolume();
 };
 
-class Limit{
-private:
-
-public:
-    //std::map<   // key: limit, val: Limit objcet for "random-like" access like a tree.
-
-};
-
+    //std::map<std::string, Limit> Stock::stocks = {};
 
 }
 
 #endif // FAKEOBJ
-

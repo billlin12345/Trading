@@ -2,7 +2,8 @@
  * - finish making orderbook
  * - make a sample algorithm
  * - fake Stock object
- *
+ * - fix Limit/Stock circular refs?
+ * - Rewrite Order so Order() is a function istead of a constructor
  */
 
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
@@ -51,11 +52,17 @@ TEST_CASE("Fake Order"){
     fake::Order fakeOrderDefault;
     fake::Order fakeOrderGOOG102("Goog", 102, 200, 1, 1);
 
+    CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 1);
+
+    fake::Order fakeOrderGOOG102Again("GoOg", 102, 100, 1, 1);
+
     CHECK(fakeOrderGOOG102.getTicker() == "GOOG");
     CHECK(fakeOrderGOOG102.getShares() == 200);
     CHECK(fakeOrderGOOG102.getLimitPrice() == 102);
     CHECK(fakeOrderGOOG102.isVisible() == 1);
     CHECK(fakeOrderGOOG102.isVisible() == true);
+
+
     std::cout << "test" << std::endl;
     std::cout << "currentDateTime()=" << currentDateTime() << std::endl;
 }
