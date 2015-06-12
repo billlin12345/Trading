@@ -19,6 +19,7 @@ private:
     double shares = 200;
     double entryTime;
     double eventTime;
+    double orderID;
     int buySellIndicator;    // 1 buy, -1 short sell, 0 sell
     bool visible;    // 1 yes, 0 hidden
     std::map<double,Order> Orders;  // map with <OrderID, Order> for quick access based on ID
@@ -38,9 +39,11 @@ public:
     double getEventTime();
     int getBuySellIndicator();
     bool isVisible();
+    double getOrderID();
 
     // execute function
 };
+
 
 class Limit{
 private:
@@ -78,7 +81,6 @@ public:
     std::vector<Limit> limitsAsk;
     std::vector<Limit> limitsBid;
 
-    // static std::map<std::string, Limit> stocks;  // correct
     static std::map<std::string, Stock> stocks;     // wrong
 
     // getters
@@ -90,8 +92,6 @@ public:
     double getCurrentPrice();
     double getAverageDailyVolume();
 };
-
-    //std::map<std::string, Limit> Stock::stocks = {};
 
 }
 

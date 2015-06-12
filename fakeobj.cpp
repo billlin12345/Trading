@@ -13,8 +13,9 @@
 #include "webdata.h"
 
 namespace fake{
-    //  std::map<std::string, Limit> Stock::stocks = {}; // right
-    std::map<std::string, Stock> Stock::stocks = {}; // test
+    // defines all the static variables
+    std::map<std::string, Stock> Stock::stocks = {};
+    double Order::OrderID = 101;
 
     Order::Order(){}
     Order::~Order(){}
@@ -23,28 +24,18 @@ namespace fake{
             t[i] = toupper(t[i]);
         }
         ticker = t;
-        Limit x = Limit(ticker, limitPrice100); // check if Limit obj exists first??
-
-        Stock y = Stock (ticker); // delete! // nvm, this is also part of the test
-
-        // Stock::stocks[ticker] = x;  // this is correct,
-        Stock::stocks[ticker] = y;  // test
-
-        std::cout << "1";
+        Limit x = Limit(ticker, limitPrice100); // check if Limit obj exists first?
+        Stock y = Stock (ticker);
+        Stock::stocks[ticker] = y;
+        orderID = Order::OrderID;
+        ++Order::OrderID;
 
         if (buySellIndicator == 1){
-            //y.limitsBid[this->limitPrice100].orders.push_back(*this); // Stock.stocks[GOOG].limitsBd
-            //ticker.limitsBid[Order.limitPrice100] = x;
-        std::cout << "2";
-            this->limitPrice100 = 10;   // delete this later, only to test small numbers
-            y.limitsBid[this->limitPrice100] = x;// further test THIS LINE BREAKS@@@@@@@
-            std::cout << "3";
-            //  Stock::stocks[ticker].orders.push_back(*this);  // this is correct
-            y.limitsBid[this->limitPrice100].orders.push_back(*this);//  // test
-        std::cout << "4";
+            y.limitsBid[this->limitPrice100] = x;
+            y.limitsBid[this->limitPrice100].orders.push_back(*this);
         }
         else if (buySellIndicator == 0){
-            ;//Stock.limitsAsk[Order.limitPrice100] = 0;//
+            ;
         }
         else if (buySellIndicator == -1){
             ;
@@ -54,8 +45,6 @@ namespace fake{
             // break
         }
 
-        //OrderID += 1;   // forgot if need getter/setter for changing this
-        //if (ticker.Order) // .............. actually maybe don't need to check since Order is always added when initialized?
     }
 
     // getters
@@ -67,7 +56,7 @@ namespace fake{
     double Order::getEventTime(){return eventTime;}
     int Order::getBuySellIndicator(){return buySellIndicator;}
     bool Order::isVisible(){return visible;}
-    // get orderID
+    double Order::getOrderID(){return orderID;}
 
     Stock::Stock(){}
     Stock::~Stock(){}
@@ -79,7 +68,6 @@ namespace fake{
         name = ticker + " Name";
         this->limitsAsk.resize(35000);
         this->limitsBid.resize(35000);
-        // stocks[ticker] = *this;   // doesn't work for static containers ...
     }   // add the web stuff to constructor init list
 
     std::string Stock::getName() {return name;}
