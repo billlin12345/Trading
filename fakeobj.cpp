@@ -1,7 +1,4 @@
 #include <iostream>
-#include <deque>
-#include <string>
-#include <map>
 #include <boost/algorithm/string.hpp>
 
 #include "fakeobj.hpp"
@@ -24,18 +21,49 @@ namespace fake{
             t[i] = toupper(t[i]);
         }
         ticker = t;
-        Limit x = Limit(ticker, limitPrice100); // check if Limit obj exists first?
-        Stock y = Stock (ticker);
-        Stock::stocks[ticker] = y;
-        orderID = Order::OrderID;
-        ++Order::OrderID;
+        if (Stock::stocks.count(ticker) == 0){   // meaning you never had the stock
+            Stock y = Stock (ticker);
+            Stock::stocks[ticker] = y;  // inserts the stock into the map
+            Limit x = Limit(ticker, limitPrice100);     // then create limit object
+            x.setVolume(x.getVolume() + shares);
 
-        if (buySellIndicator == 1){
+            if (buySellIndicator == 1){
+                Stock::stocks[ticker].limitsBid[limitPrice100] = x;
+                y.limitsBid[this->limitPrice100] = x;
+                y.limitsBid[this->limitPrice100].orders.push_back(*this);
+
+            }
+            else if (buySellIndicator == 0){
+                Stock::stocks[ticker].limitsAsk[limitPrice100] = x;
+                y.limitsAsk[this->limitPrice100] = x;
+                y.limitsAsk[this->limitPrice100].orders.push_back(*this);
+
+            }
+            else if (buySellIndicator == -1){
+
+            }
+            else{
+                std::cout << "Please designate whether you are buying, selling, or short-selling."<< std::endl;
+                // break
+            }
+        }
+        else if (buySellIndicator == 1){  // the stock exists, so define x as the thing inside
+            Limit &x = Stock::stocks[ticker].limitsBid[limitPrice100];
+            x.setSize(x.getSize() + 1);
+            x.setVolume(x.getVolume() + shares);
+            Stock &y = Stock::stocks[ticker];
+
             y.limitsBid[this->limitPrice100] = x;
             y.limitsBid[this->limitPrice100].orders.push_back(*this);
         }
         else if (buySellIndicator == 0){
-            ;
+            Limit &x = Stock::stocks[ticker].limitsAsk[limitPrice100];
+            x.setSize(x.getSize() + 1);
+            x.setVolume(x.getVolume() + shares);
+            Stock &y = Stock::stocks[ticker];
+            y.limitsAsk[this->limitPrice100] = x;
+            y.limitsAsk[this->limitPrice100].orders.push_back(*this);
+
         }
         else if (buySellIndicator == -1){
             ;
@@ -45,6 +73,8 @@ namespace fake{
             // break
         }
 
+        orderID = Order::OrderID;
+        ++Order::OrderID;
     }
 
     // getters
@@ -78,11 +108,29 @@ namespace fake{
     double Stock::getCurrentPrice() {return currentPrice;}
     double Stock::getAverageDailyVolume(){return averageDailyVolume;}
 
-    Limit::Limit(){}
+
+
+    Limit::Limit(){
+        size = 51;   // why is this being called for refs instead of the correct constructor?
+    }
     Limit::~Limit(){}
-    Limit::Limit(std::string t, double price):ticker(t),limitPrice(price){}
+    Limit::Limit(std::string t, double price):limitPrice(price){
+        for(auto i=0; t[i]; ++i){
+            t[i] = toupper(t[i]);
+        }
+        ticker = t;
+        size = 1;   // this isn't being called for refs
+    }
+
+
+    // getters
     double Limit::getSize(){return size;}
     double Limit::getVolume(){return volume;}
+
+    // setters
+    void Limit::setSize(double i){size = i;}
+    void Limit::setVolume(double i){volume = i;}
+
 
 
 }

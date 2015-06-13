@@ -60,6 +60,8 @@ public:
     std::deque<Order> orders;
     double getSize();
     double getVolume();
+    void setSize(double i);
+    void setVolume(double i);
 };
 
 

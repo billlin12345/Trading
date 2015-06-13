@@ -1,10 +1,10 @@
 /*  TODO
- * - finish making orderbook
- * - make a sample algorithm
- * - fake Stock object
+ * - finish making orderbook (initializing all the vars)
  * - fix Limit/Stock circular refs?
  * - Rewrite Order so Order() is a function istead of a constructor?
- * - Make sure ticker is capitalized everywhere
+ * - Make sure ticker is capitalized everywhere.
+ * - Clean up all the include files in the headers.
+ * - Refactor this awful code.
  */
 
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
@@ -51,13 +51,17 @@ TEST_CASE("Fake Stock"){
 TEST_CASE("Fake Order"){
     std::srand(std::time(NULL));
     fake::Order fakeOrderDefault;
-    fake::Order fakeOrderGOOG102("Goog", 102, 200, 1, 1);
+    fake::Order fakeOrderGOOG102("GOOG", 102, 200, 1, 1);
 
     CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 1);
-    fake::Order fakeOrderGOOG102Again("GoOg", 102, 100, 1, 1);
-    fake::Order ("goog", 102, 100, 1, 1);    // anonymous; must save this in queue!
+    fake::Order fakeOrderGOOG102Again("GOOG", 102, 100, 1, 1);
+    CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 2);
 
-    CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 2); // line breaks if it's not caps
+    fake::Order ("GOOG", 102, 100, 1, 1);    // anonymous; must save this in queue!
+    CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 3);
+
+    fake::Order ("goog", 102, 100, 1, 1);
+    CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 4); // line breaks if it's not caps
 
     CHECK(fakeOrderGOOG102.getTicker() == "GOOG");
     CHECK(fakeOrderGOOG102.getShares() == 200);
