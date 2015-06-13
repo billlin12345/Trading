@@ -1,13 +1,15 @@
 /*  TODO
- * - finish making orderbook (initializing all the vars)
+ * - finish making orderbook (initializing all the vars/selling/execution/canceling)
  * - fix Limit/Stock circular refs?
  * - Rewrite Order so Order() is a function istead of a constructor?
- * - Make sure ticker is capitalized everywhere.
+ * - Make sure ticker is converted to caps everywhere when used.
  * - Clean up all the include files in the headers.
+ * - Add visibility condition.
+ * - Unit test volume/size of Limit's and also the order queue.
  * - Refactor this awful code.
  */
 
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+#define CATCH_CONFIG_MAIN
 
 #include <iostream>
 #include <time.h>
@@ -28,10 +30,7 @@ const std::string currentDateTime() {
     struct tm  tstruct;
     char       buf[80];
     tstruct = *localtime(&now);
-    // Visit http://en.cppreference.com/w/cpp/chrono/c/strftime
-    // for more information about date/time format
     strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
-
     return buf;
 }
 
@@ -51,24 +50,31 @@ TEST_CASE("Fake Stock"){
 TEST_CASE("Fake Order"){
     std::srand(std::time(NULL));
     fake::Order fakeOrderDefault;
-    fake::Order fakeOrderGOOG102("GOOG", 102, 200, 1, 1);
+    fake::Order fakeOrderGOOG102("GooG", 102, 200, 1, 1);   // order 101
 
     CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 1);
-    fake::Order fakeOrderGOOG102Again("GOOG", 102, 100, 1, 1);
-    CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 2);
 
-    fake::Order ("GOOG", 102, 100, 1, 1);    // anonymous; must save this in queue!
+    fake::Order ("GOOG", 102, 500, 1, 1);    // anonymous; must save this in queue!, order 102
+
+    fake::Order fakeOrderGOOG102Again("GOog", 102, 100, 1, 1);  // order 103
     CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 3);
 
-    fake::Order ("goog", 102, 100, 1, 1);
-    CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 4); // line breaks if it's not caps
+    fake::Order z = fake::Order ("goog", 102, 10, 1, 0);    // order 104
+    CHECK(fake::Stock::stocks["GOOG"].limitsBid[10200].getSize() == 4);
 
     CHECK(fakeOrderGOOG102.getTicker() == "GOOG");
     CHECK(fakeOrderGOOG102.getShares() == 200);
     CHECK(fakeOrderGOOG102.getLimitPrice() == 102);
     CHECK(fakeOrderGOOG102.isVisible() == 1);
     CHECK(fakeOrderGOOG102.isVisible() == true);
-    CHECK(fakeOrderGOOG102Again.getOrderID() == 102);   // change this based on how many orders
+    CHECK(fakeOrderGOOG102Again.getOrderID() == 103);   // change this based on how many orders
+    CHECK(z.getTicker() == "GOOG");
+    CHECK(z.getShares() == 10);
+    CHECK(z.getLimitPrice() == 102);
+    CHECK(z.isVisible() == 0);
+    CHECK(z.isVisible() == false);
+    CHECK(z.getOrderID() == 104);   // change this based on how many orders
+
 
     std::cout << "test" << std::endl;
     std::cout << "currentDateTime()=" << currentDateTime() << std::endl;

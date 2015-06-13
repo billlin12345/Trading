@@ -4,6 +4,7 @@
 #include <map>
 #include <deque>
 #include <vector>
+#include <string>
 
 #include "orderbook.hpp"
 #include "orderbooksimulation.hpp"
@@ -11,7 +12,6 @@
 namespace fake{
 
 class Order{    // since this is the Orderbook, all Orders HERE are assumed to be limit Orders
-
 private:
     std::string ticker;
     double limitPrice = rand()%100 + 15;
