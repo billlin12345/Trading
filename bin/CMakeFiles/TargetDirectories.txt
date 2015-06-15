@@ -1,0 +1,2 @@
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles/AlgoTradingTest.dir
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/cointegration/CMakeFiles/JohansenTest.dir
