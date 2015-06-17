@@ -12,6 +12,12 @@ string
 vector
 -
 
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/cointegration/JohansenHelper.h
+CommonTypes.h
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/cointegration/CommonTypes.h
+gsl/gsl_matrix.h
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/cointegration/gsl/gsl_matrix.h
+
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/algorithms.hpp
 
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/catch.hpp
@@ -312,7 +318,7 @@ iostream
 time.h
 -
 curl/curl.h
-/home/bill/AlgoTradingQTTest/AlgoTradingTest/src/curl/curl.h
+-
 ../include/catch.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/catch.hpp
 ../include/algorithms.hpp
@@ -327,8 +333,8 @@ curl/curl.h
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/transactioncostmodeling.hpp
 ../include/webdata.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/webdata.hpp
-../cointegration/CommonTypes.h
-/home/bill/AlgoTradingQTTest/AlgoTradingTest/cointegration/CommonTypes.h
+../cointegration/JohansenHelper.h
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/cointegration/JohansenHelper.h
 
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/orderbook.cpp
 iostream

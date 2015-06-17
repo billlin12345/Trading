@@ -23,14 +23,14 @@ private:
     double orderID;
     int buySellIndicator;    // 1 buy, -1 short sell, 0 sell
     bool visible;    // 1 yes, 0 hidden
-    std::map<double,Order> Orders;  // map with <OrderID, Order> for quick access based on ID
 
 public:
-    Order();
+    //  Order();
     ~Order();
     Order(std::string t, double price, double vol, int indi, bool visi);
     Order(std::string t, double vol, int indi);
     static double OrderID;    // increments by 1 each Order, start at 101
+    static std::map<double,Order> Orders;  // map with <OrderID, Order> for quick access based on ID
 
     // getters
     std::string getTicker();
@@ -53,10 +53,19 @@ private:
     double volume;
 
 public:
-    Limit();
+    Limit(){
+}
+
+    Limit(const Limit &l){
+        ticker = l.ticker;
+        size = l.size;
+        volume = l.volume;
+        orders = l.orders;
+    }
+
     ~Limit();
     Limit(std::string t, double price);
-    //std::map<   // key: limit, val: Limit objcet for "random-like" access like a tree.
+    //std::map<   // key: limit, val: Limit object for "random-like" access like a tree.
     std::deque<Order> orders;
     double getSize();
     double getVolume();
@@ -67,16 +76,33 @@ public:
 
 class Stock{
 private:
-    std::string name= "Apple";
-    std::string ticker = "AAPL";
+    std::string name;
+    std::string ticker;
     std::string exchange;
     std::string exchangeSymbol;
     std::string continent;
-    double currentPrice = rand()%100 + 15;
+    double currentPrice;    // = rand()%100 + 15;
     double averageDailyVolume;
 
 public:
-    Stock();
+    Stock(){
+        this->limitsAsk.resize(35000);
+        this->limitsBid.resize(35000);
+    }
+/*
+    Stock(const Stock &s){
+        ticker = s.ticker;
+        currentPrice = s.currentPrice;
+        name = ticker + " Name";
+        bestAsk = s.bestAsk;
+        bestBid = s.bestBid;
+
+        this->limitsAsk.resize(35000);
+        this->limitsBid.resize(35000);
+        limitsAsk = s.limitsAsk;
+        limitsBid = s.limitsBid;
+    }
+*/
     ~Stock();
     Stock(std::string t);
     static std::map<double, std::queue<fake::Order> > Orderbook;    // this is useless?

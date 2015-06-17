@@ -21,6 +21,7 @@ CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/fakeobj.cpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/cointegration/CommonTypes.h
+ /home/bill/AlgoTradingQTTest/AlgoTradingTest/cointegration/JohansenHelper.h
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/algorithms.hpp
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/catch.hpp
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/engine.hpp
