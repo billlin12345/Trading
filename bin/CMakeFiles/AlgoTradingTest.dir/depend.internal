@@ -19,6 +19,12 @@ CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/transactioncostmodeling.hpp
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/webdata.hpp
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/fakeobj.cpp
+CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o
+ /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/engine.hpp
+ /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/fakeobj.hpp
+ /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/graphing.hpp
+ /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/orderbooksimulation.hpp
+ /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/graphing.cpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/cointegration/CommonTypes.h
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/cointegration/JohansenHelper.h
@@ -26,6 +32,7 @@ CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/catch.hpp
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/engine.hpp
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/fakeobj.hpp
+ /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/graphing.hpp
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/orderbook.hpp
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/orderbooksimulation.hpp
  /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/transactioncostmodeling.hpp

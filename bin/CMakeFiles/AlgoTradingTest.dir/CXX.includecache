@@ -258,6 +258,14 @@ orderbooksimulation.hpp
 engine.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/engine.hpp
 
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/graphing.hpp
+map
+-
+string
+-
+fakeobj.hpp
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/fakeobj.hpp
+
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/orderbook.hpp
 iostream
 -
@@ -312,10 +320,22 @@ boost/algorithm/string.hpp
 ../include/transactioncostmodeling.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/transactioncostmodeling.hpp
 
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/src/graphing.cpp
+iostream
+-
+iomanip
+-
+../include/graphing.hpp
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/graphing.hpp
+
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/main.cpp
 iostream
 -
+thread
+-
 time.h
+-
+chrono
 -
 curl/curl.h
 -
@@ -325,6 +345,8 @@ curl/curl.h
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/algorithms.hpp
 ../include/fakeobj.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/fakeobj.hpp
+../include/graphing.hpp
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/graphing.hpp
 ../include/orderbook.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/orderbook.hpp
 ../include/orderbooksimulation.hpp

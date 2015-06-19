@@ -12,7 +12,7 @@
 
 namespace fake{
 
-class Order{    // since this is the Orderbook, all Orders HERE are assumed to be limit Orders
+class Order{
 private:
     std::string ticker;
     double limitPrice = rand()%100 + 15;

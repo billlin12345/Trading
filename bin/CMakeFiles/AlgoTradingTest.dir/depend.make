@@ -19,12 +19,19 @@ CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o: ../include/transactioncostmode
 CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o: ../include/webdata.hpp
 CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o: ../src/fakeobj.cpp
 
+CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o: ../include/engine.hpp
+CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o: ../include/fakeobj.hpp
+CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o: ../include/graphing.hpp
+CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o: ../include/orderbooksimulation.hpp
+CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o: ../src/graphing.cpp
+
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../cointegration/CommonTypes.h
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../cointegration/JohansenHelper.h
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/algorithms.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/catch.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/engine.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/fakeobj.hpp
+CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/graphing.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/orderbook.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/orderbooksimulation.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/transactioncostmodeling.hpp

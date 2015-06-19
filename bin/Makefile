@@ -199,6 +199,30 @@ src/fakeobj.cpp.s:
 	$(MAKE) -f CMakeFiles/AlgoTradingTest.dir/build.make CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.s
 .PHONY : src/fakeobj.cpp.s
 
+src/graphing.o: src/graphing.cpp.o
+.PHONY : src/graphing.o
+
+# target to build an object file
+src/graphing.cpp.o:
+	$(MAKE) -f CMakeFiles/AlgoTradingTest.dir/build.make CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o
+.PHONY : src/graphing.cpp.o
+
+src/graphing.i: src/graphing.cpp.i
+.PHONY : src/graphing.i
+
+# target to preprocess a source file
+src/graphing.cpp.i:
+	$(MAKE) -f CMakeFiles/AlgoTradingTest.dir/build.make CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.i
+.PHONY : src/graphing.cpp.i
+
+src/graphing.s: src/graphing.cpp.s
+.PHONY : src/graphing.s
+
+# target to generate assembly for a file
+src/graphing.cpp.s:
+	$(MAKE) -f CMakeFiles/AlgoTradingTest.dir/build.make CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.s
+.PHONY : src/graphing.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -338,6 +362,9 @@ help:
 	@echo "... src/fakeobj.o"
 	@echo "... src/fakeobj.i"
 	@echo "... src/fakeobj.s"
+	@echo "... src/graphing.o"
+	@echo "... src/graphing.i"
+	@echo "... src/graphing.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

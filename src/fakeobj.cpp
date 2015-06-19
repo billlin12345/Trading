@@ -10,7 +10,7 @@
 namespace fake{
     // defines all the static variables
     std::map<std::string, Stock> Stock::stocks = {};    // key: ticker, value: Stock
-    std::map<double,Order> Orders = {}; // key: ID, value: Order
+    std::map<double,Order> Orders = {};    // key: ID, value: Order
     double Order::OrderID = 101;
 
     Order::~Order(){}
@@ -20,19 +20,21 @@ namespace fake{
         }
 
         ticker = t;
+      //  Order::Orders[Order::OrderID] = *this;
         if (Stock::stocks.count(ticker) == 0){   // meaning you never had the stock
             Stock::stocks[ticker] = Stock(ticker);
             Limit x = Limit(ticker, limitPrice100);     // then create limit object
             x.setVolume(x.getVolume() + shares);
+
             if (buySellIndicator == 1){
                 Stock::stocks[ticker].limitsBid.at(limitPrice100) = x;
                 Stock::stocks[ticker].limitsBid[limitPrice100].orders.push_back(*this);
-                Stock::stocks[ticker].bestBid = limitPrice; // initializes best bid
+                Stock::stocks[ticker].bestBid = limitPrice;    // initializes best bid
             }
             else if (buySellIndicator == 0){
                 Stock::stocks[ticker].limitsAsk[limitPrice100] = x;
                 Stock::stocks[ticker].limitsAsk[limitPrice100].orders.push_back(*this);
-                Stock::stocks[ticker].bestAsk = limitPrice; // initializes best ask
+                Stock::stocks[ticker].bestAsk = limitPrice;    // initializes best ask
             }
             else if (buySellIndicator == -1){
 
@@ -42,18 +44,18 @@ namespace fake{
                 // break
             }
         }
-        else if (buySellIndicator == 1){  // the stock exists, so define x as the thing inside
+        else if (buySellIndicator == 1){    // the stock exists, so define x as the thing inside
             Stock::stocks[ticker].limitsBid[limitPrice100].setSize(Stock::stocks[ticker].limitsBid[limitPrice100].getSize() + 1);
             Stock::stocks[ticker].limitsBid[limitPrice100].setVolume(Stock::stocks[ticker].limitsBid[limitPrice100].getVolume() + shares);
             if (limitPrice >= Stock::stocks[ticker].bestBid){
-                Stock::stocks[ticker].bestBid = limitPrice;}   // replaces bestBid if buy price is higher
+                Stock::stocks[ticker].bestBid = limitPrice;}    // replaces bestBid if buy price is higher
             Stock::stocks[ticker].limitsBid[limitPrice100].orders.push_back(*this);
         }
         else if (buySellIndicator == 0){
             Stock::stocks[ticker].limitsAsk[limitPrice100].setSize(Stock::stocks[ticker].limitsAsk[limitPrice100].getSize() + 1);
             Stock::stocks[ticker].limitsAsk[limitPrice100].setVolume(Stock::stocks[ticker].limitsAsk[limitPrice100].getVolume() + shares);
             if (limitPrice <= Stock::stocks[ticker].bestAsk || Stock::stocks[ticker].bestAsk < 0.0001){
-                Stock::stocks[ticker].bestAsk = limitPrice;}   // replaces bestAsk is sell price is lower
+                Stock::stocks[ticker].bestAsk = limitPrice;}    // replaces bestAsk if sell price is lower or ask is currently zero
             Stock::stocks[ticker].limitsAsk[limitPrice100].orders.push_back(*this);
 
         }

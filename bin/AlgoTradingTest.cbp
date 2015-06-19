@@ -140,6 +140,8 @@
       </Unit>
       <Unit filename="/home/bill/AlgoTradingQTTest/AlgoTradingTest/src/fakeobj.cpp">
       </Unit>
+      <Unit filename="/home/bill/AlgoTradingQTTest/AlgoTradingTest/src/graphing.cpp">
+      </Unit>
       <Unit filename="/home/bill/AlgoTradingQTTest/AlgoTradingTest/src/main.cpp">
       </Unit>
       <Unit filename="/home/bill/AlgoTradingQTTest/AlgoTradingTest/src/orderbook.cpp">
@@ -159,6 +161,8 @@
       <Unit filename="/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/engine.hpp">
       </Unit>
       <Unit filename="/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/fakeobj.hpp">
+      </Unit>
+      <Unit filename="/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/graphing.hpp">
       </Unit>
       <Unit filename="/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/orderbook.hpp">
       </Unit>
