@@ -8,7 +8,7 @@
 namespace orderbook{
 
 void displayGraph(std::string ticker);
-
+void updateGraph(fake::Order order);
 }
 
 #endif // GRAPHING

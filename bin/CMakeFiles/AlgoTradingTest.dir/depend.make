@@ -13,6 +13,7 @@ CMakeFiles/AlgoTradingTest.dir/src/engine.cpp.o: ../src/engine.cpp
 
 CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o: ../include/engine.hpp
 CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o: ../include/fakeobj.hpp
+CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o: ../include/helperfunctions.hpp
 CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o: ../include/orderbook.hpp
 CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o: ../include/orderbooksimulation.hpp
 CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o: ../include/transactioncostmodeling.hpp
@@ -25,6 +26,9 @@ CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o: ../include/graphing.hpp
 CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o: ../include/orderbooksimulation.hpp
 CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o: ../src/graphing.cpp
 
+CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o: ../include/helperfunctions.hpp
+CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o: ../src/helperfunctions.cpp
+
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../cointegration/CommonTypes.h
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../cointegration/JohansenHelper.h
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/algorithms.hpp
@@ -32,6 +36,7 @@ CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/catch.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/engine.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/fakeobj.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/graphing.hpp
+CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/helperfunctions.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/orderbook.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/orderbooksimulation.hpp
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../include/transactioncostmodeling.hpp

@@ -32,7 +32,7 @@ public:
     static double OrderID;    // increments by 1 each Order, start at 101
     static std::map<double,Order> Orders;  // map with <OrderID, Order> for quick access based on ID
 
-    // getters
+    // getters/setters
     std::string getTicker();
     double getShares();
     double getLimitPrice();
@@ -42,6 +42,7 @@ public:
     int getBuySellIndicator();
     bool isVisible();
     double getOrderID();
+    void incrementShares(double i);
 };
 
 
@@ -69,8 +70,8 @@ public:
     std::deque<Order> orders;
     double getSize();
     double getVolume();
-    void setSize(double i);
-    void setVolume(double i);
+    void incrementSize(double i);
+    void incrementVolume(double i);
 };
 
 

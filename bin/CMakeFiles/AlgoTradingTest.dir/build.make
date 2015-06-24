@@ -118,9 +118,32 @@ CMakeFiles/AlgoTradingTest.dir/src/engine.cpp.o.provides: CMakeFiles/AlgoTrading
 
 CMakeFiles/AlgoTradingTest.dir/src/engine.cpp.o.provides.build: CMakeFiles/AlgoTradingTest.dir/src/engine.cpp.o
 
+CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o: CMakeFiles/AlgoTradingTest.dir/flags.make
+CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o: ../src/helperfunctions.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o -c /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/helperfunctions.cpp
+
+CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/helperfunctions.cpp > CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.i
+
+CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/helperfunctions.cpp -o CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.s
+
+CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o.requires:
+.PHONY : CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o.requires
+
+CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o.provides: CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o.requires
+	$(MAKE) -f CMakeFiles/AlgoTradingTest.dir/build.make CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o.provides.build
+.PHONY : CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o.provides
+
+CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o.provides.build: CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o
+
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: CMakeFiles/AlgoTradingTest.dir/flags.make
 CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o -c /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/main.cpp
 
@@ -143,7 +166,7 @@ CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o.provides.build: CMakeFiles/AlgoTra
 
 CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o: CMakeFiles/AlgoTradingTest.dir/flags.make
 CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o: ../src/graphing.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o -c /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/graphing.cpp
 
@@ -166,7 +189,7 @@ CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o.provides.build: CMakeFiles/Alg
 
 CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o: CMakeFiles/AlgoTradingTest.dir/flags.make
 CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o: ../src/fakeobj.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o -c /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/fakeobj.cpp
 
@@ -189,7 +212,7 @@ CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o.provides.build: CMakeFiles/Algo
 
 CMakeFiles/AlgoTradingTest.dir/src/orderbooksimulation.cpp.o: CMakeFiles/AlgoTradingTest.dir/flags.make
 CMakeFiles/AlgoTradingTest.dir/src/orderbooksimulation.cpp.o: ../src/orderbooksimulation.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/AlgoTradingTest.dir/src/orderbooksimulation.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/AlgoTradingTest.dir/src/orderbooksimulation.cpp.o -c /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/orderbooksimulation.cpp
 
@@ -212,7 +235,7 @@ CMakeFiles/AlgoTradingTest.dir/src/orderbooksimulation.cpp.o.provides.build: CMa
 
 CMakeFiles/AlgoTradingTest.dir/src/orderbook.cpp.o: CMakeFiles/AlgoTradingTest.dir/flags.make
 CMakeFiles/AlgoTradingTest.dir/src/orderbook.cpp.o: ../src/orderbook.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/AlgoTradingTest.dir/src/orderbook.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/AlgoTradingTest.dir/src/orderbook.cpp.o -c /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/orderbook.cpp
 
@@ -235,7 +258,7 @@ CMakeFiles/AlgoTradingTest.dir/src/orderbook.cpp.o.provides.build: CMakeFiles/Al
 
 CMakeFiles/AlgoTradingTest.dir/src/transactioncostmodeling.cpp.o: CMakeFiles/AlgoTradingTest.dir/flags.make
 CMakeFiles/AlgoTradingTest.dir/src/transactioncostmodeling.cpp.o: ../src/transactioncostmodeling.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/bill/AlgoTradingQTTest/AlgoTradingTest/bin/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/AlgoTradingTest.dir/src/transactioncostmodeling.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/AlgoTradingTest.dir/src/transactioncostmodeling.cpp.o -c /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/transactioncostmodeling.cpp
 
@@ -261,6 +284,7 @@ AlgoTradingTest_OBJECTS = \
 "CMakeFiles/AlgoTradingTest.dir/src/algorithms.cpp.o" \
 "CMakeFiles/AlgoTradingTest.dir/src/webdata.cpp.o" \
 "CMakeFiles/AlgoTradingTest.dir/src/engine.cpp.o" \
+"CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o" \
 "CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o" \
 "CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o" \
 "CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o" \
@@ -274,6 +298,7 @@ AlgoTradingTest_EXTERNAL_OBJECTS =
 AlgoTradingTest: CMakeFiles/AlgoTradingTest.dir/src/algorithms.cpp.o
 AlgoTradingTest: CMakeFiles/AlgoTradingTest.dir/src/webdata.cpp.o
 AlgoTradingTest: CMakeFiles/AlgoTradingTest.dir/src/engine.cpp.o
+AlgoTradingTest: CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o
 AlgoTradingTest: CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o
 AlgoTradingTest: CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o
 AlgoTradingTest: CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o
@@ -292,6 +317,7 @@ CMakeFiles/AlgoTradingTest.dir/build: AlgoTradingTest
 CMakeFiles/AlgoTradingTest.dir/requires: CMakeFiles/AlgoTradingTest.dir/src/algorithms.cpp.o.requires
 CMakeFiles/AlgoTradingTest.dir/requires: CMakeFiles/AlgoTradingTest.dir/src/webdata.cpp.o.requires
 CMakeFiles/AlgoTradingTest.dir/requires: CMakeFiles/AlgoTradingTest.dir/src/engine.cpp.o.requires
+CMakeFiles/AlgoTradingTest.dir/requires: CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o.requires
 CMakeFiles/AlgoTradingTest.dir/requires: CMakeFiles/AlgoTradingTest.dir/src/main.cpp.o.requires
 CMakeFiles/AlgoTradingTest.dir/requires: CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.o.requires
 CMakeFiles/AlgoTradingTest.dir/requires: CMakeFiles/AlgoTradingTest.dir/src/fakeobj.cpp.o.requires

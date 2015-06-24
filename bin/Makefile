@@ -223,6 +223,30 @@ src/graphing.cpp.s:
 	$(MAKE) -f CMakeFiles/AlgoTradingTest.dir/build.make CMakeFiles/AlgoTradingTest.dir/src/graphing.cpp.s
 .PHONY : src/graphing.cpp.s
 
+src/helperfunctions.o: src/helperfunctions.cpp.o
+.PHONY : src/helperfunctions.o
+
+# target to build an object file
+src/helperfunctions.cpp.o:
+	$(MAKE) -f CMakeFiles/AlgoTradingTest.dir/build.make CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.o
+.PHONY : src/helperfunctions.cpp.o
+
+src/helperfunctions.i: src/helperfunctions.cpp.i
+.PHONY : src/helperfunctions.i
+
+# target to preprocess a source file
+src/helperfunctions.cpp.i:
+	$(MAKE) -f CMakeFiles/AlgoTradingTest.dir/build.make CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.i
+.PHONY : src/helperfunctions.cpp.i
+
+src/helperfunctions.s: src/helperfunctions.cpp.s
+.PHONY : src/helperfunctions.s
+
+# target to generate assembly for a file
+src/helperfunctions.cpp.s:
+	$(MAKE) -f CMakeFiles/AlgoTradingTest.dir/build.make CMakeFiles/AlgoTradingTest.dir/src/helperfunctions.cpp.s
+.PHONY : src/helperfunctions.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -365,6 +389,9 @@ help:
 	@echo "... src/graphing.o"
 	@echo "... src/graphing.i"
 	@echo "... src/graphing.s"
+	@echo "... src/helperfunctions.o"
+	@echo "... src/helperfunctions.i"
+	@echo "... src/helperfunctions.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

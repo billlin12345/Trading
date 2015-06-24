@@ -18,14 +18,14 @@ void displayGraph(std::string ticker){
             for  (auto k = 0; k < temp; ++k)
                 std::cout << '*';
             if (temp >= 0.000001)
-                std::cout << "     " << std::setprecision(0) << temp;
+                std::cout << "     " << std::setprecision(0) << temp * 10;
         std::cout << "\n";
 
     }
 
     // for loop to create the empty void between bestBid and bestAsk
     for (auto m = fake::Stock::stocks[ticker].bestBid + 0.01; m < fake::Stock::stocks[ticker].bestAsk; m += 0.01){
-        std::cout << m << ": \n";
+        std::cout << std::setprecision(2) << std::fixed << m << ": \n";
     }
 
     for (auto j = fake::Stock::stocks[ticker].bestAsk; j <= upperRange; j += 0.01){
@@ -36,22 +36,21 @@ void displayGraph(std::string ticker){
             for  (auto k = 0; k < temp; ++k)
                 std::cout << '*';
             if (temp >= 0.000001)
-                std::cout << "     " << std::setprecision(0) << temp;
+                std::cout << "     " << std::setprecision(0) << temp * 10;
         std::cout << std::setprecision(2) << "\n";
 
     }
 
 }
 
-/*
-updateGraph(){  // adds each order in
+
+/*void updateGraph(fake::Order order){  // adds each order in for real-time updating, check bid/askchange?
 
 }
-*/
 
-/*
-displayGraphContinuously(){  // adds each order in
 
+void displayGraphContinuously(){
+    updateGraph(
 }
 */
 

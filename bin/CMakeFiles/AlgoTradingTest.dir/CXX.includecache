@@ -266,6 +266,10 @@ string
 fakeobj.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/fakeobj.hpp
 
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/helperfunctions.hpp
+string
+-
+
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/orderbook.hpp
 iostream
 -
@@ -309,10 +313,14 @@ string
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/fakeobj.cpp
 iostream
 -
+iterator
+-
 boost/algorithm/string.hpp
 -
 ../include/fakeobj.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/fakeobj.hpp
+../include/helperfunctions.hpp
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/helperfunctions.hpp
 ../include/orderbook.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/orderbook.hpp
 ../include/orderbooksimulation.hpp
@@ -327,6 +335,10 @@ iomanip
 -
 ../include/graphing.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/graphing.hpp
+
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/src/helperfunctions.cpp
+../include/helperfunctions.hpp
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/helperfunctions.hpp
 
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/src/main.cpp
 iostream
@@ -345,6 +357,8 @@ curl/curl.h
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/algorithms.hpp
 ../include/fakeobj.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/fakeobj.hpp
+../include/helperfunctions.hpp
+/home/bill/AlgoTradingQTTest/AlgoTradingTest/include/helperfunctions.hpp
 ../include/graphing.hpp
 /home/bill/AlgoTradingQTTest/AlgoTradingTest/include/graphing.hpp
 ../include/orderbook.hpp
