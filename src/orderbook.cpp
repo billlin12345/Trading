@@ -109,7 +109,7 @@ Order::Order(std::string t, double price, double vol, int indi, bool visi):limit
 
 
     Limit::Limit(){
-    size = 51;   // why is this being called for refs instead of the correct constructor?
+    size = 1;
     }
     Limit::~Limit(){}
     Limit::Limit(std::string t, double price):limitPrice(price){
@@ -117,9 +117,8 @@ Order::Order(std::string t, double price, double vol, int indi, bool visi):limit
         t[i] = toupper(t[i]);
     }
     ticker = t;
-    size = 1;   // this isn't being called for refs
+    size = 1;
     }
-
 
     // getters
     double Limit::getSize(){return size;}
