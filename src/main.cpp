@@ -123,6 +123,7 @@ TEST_CASE("Simple Orderbook Bar Graph (And Multi-Threading Later)"){
 
 }
 
+
 TEST_CASE("Buys and Sells Along the Order Deque"){
     fake::Order("SAR", 81, 150, 1, 1);
     fake::Order("SAR", 81, 350, 1, 1);
