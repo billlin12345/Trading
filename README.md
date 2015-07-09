@@ -1,5 +1,6 @@
 # Trading
-I am slowly porting over from Python to C++.
+I am slowly porting over from Python to C++. For a synopsis of the Python implementation/goals:
+https://dl.dropboxusercontent.com/u/94871865/Project%20Synopsis.docx
 
 
 This is an algorithmic trading platform that will allow for backtesting, portfolio optimization, and limit orderbook simulations.
